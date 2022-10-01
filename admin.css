@@ -1,0 +1,77 @@
+.logo {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.display-4 {
+    font-weight: bold;
+}
+
+.bi-stack {
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: 4px;
+    opacity: 0.4;
+    font-size: 90px;
+}
+
+.bi-cart {
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: 4px;
+    opacity: 0.4;
+    font-size: 90px;
+}
+
+.bi-people-fill {
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: 4px;
+    opacity: 0.4;
+    font-size: 90px;
+}
+
+.bi-file-earmark {
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: 4px;
+    opacity: 0.4;
+    font-size: 90px;
+}
+
+.fa-chart-simple {
+    position: absolute;
+    z-index: 0;
+    top: 50px;
+    right: 10px;
+    opacity: 0.4;
+    font-size: 90px;
+}
+
+.card-body a {
+    text-decoration: none;
+}
+
+/* .tengah {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+} */
+
+center .profil {
+    margin-top: 20px;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: 0 0 10px gray;
+}
+
+center h2 {
+    font-family: Brush Script MT;
+    /* font-size: 20px */
+    margin-bottom: 10px;
+}
