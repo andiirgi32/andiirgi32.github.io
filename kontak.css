@@ -49,7 +49,7 @@
     box-sizing: border-box;
 }
 
-.kolom .fa-phone {
+.kolom .bi-telephone-fill {
     color: blue;
 }
 
@@ -57,11 +57,11 @@
     color: yellow;
 }
 
-.kolom .fa-square-whatsapp {
+.kolom .bi-whatsapp {
     color: green;
 }
 
-.kolom .fa-envelope {
+.kolom .bi-envelope-fill {
     color: red;
 }
 
