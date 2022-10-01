@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bi-house-door-fill {
+    color: palevioletred;
+    /* font-size: 20px; */
+}
+
+.bi-envelope-paper-heart-fill {
+    color: palevioletred;
+}
+
+.bi-shop {
+    color: palevioletred;
+}
+
+.bi-bag-heart {
+    color: palevioletred;
+}
+
+.kolom1 h1 {
+    margin-top: 20px;
+    color: black;
+    font-family: Brush Script MT;
+    font-size: 50px;
+}
+
+.kolom1 p {
+    font-size: 25px;
+    font-family: Berlin Sans FB;
+    /* color: white; */
+    background-color: rgba(255, 255, 255, 0.56);
+    border-radius: 20px;
+    /* width: 700px;
+    margin: auto; */
+}
+
+.kolom2 {
+    background-color: #ffffff;
+    max-width: 100%;
+    /* height: 1000px; */
+    padding-left: 40px;
+    padding-right: 40px;   
+}
+
+.kolom2 h1 {
+    margin-top: 20px;
+    color: black;
+    font-family: Brush Script MT;
+    font-size: 50px;
+}
+
+.kolom2 p {
+    font-size: 25px;
+    font-family: Berlin Sans FB;
+    color: black;
+}
+
+.kolom2 img {
+    width: 300px;
+    position: relative;
+    top: 5px;
+    left: 0;
+    border-radius: 50%;
+    border: 5px solid black;
+    box-shadow: 0 0 30px rgb(79, 79, 79);
+
+}
+
+.kolom3 {
+    background-color: #ffe1e1;
+}
+
+.kolom3 h2 {
+    /* display: inline-block; */
+    /* left: 50px; */
+    /* padding-right: 120px; */
+    /* position: relative; */
+    font-family: Berlin Sans FB;
+    padding-right: 8px;
+}
+
+.kolom3 .fa-tags {
+    color: red;
+    padding-right: 10px;
+    padding-left: 8px;
+    font-size: 50px;
+}
+
+.logo {
+    width: 75px;
+    margin-right: 25px;
+    border-radius: 50%;
+}
+
+
+/* contoh */
+
+.container-dua {
+    max-width: 90%;
+    margin: auto;
+}
+
+.layanan {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.layanan {
+    border: 3px solid black;
+    border-radius: 25px;
+    box-shadow: 0 0 20px violet;
+}
+
+.layanan.satu {
+    background-color: #808080;
+
+}
+
+.layanan.dua {
+    background-color: #808080;
+
+}
+
+.layanan.tiga {
+    background-color: #808080;
+
+}
+
+.layanan .kotak img {
+    box-sizing: border-box;
+    max-width: auto;
+    display: inline-block;
+}
+/* akhir contoh */
+
+.kotak {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    /* margin: auto; */
+    padding: 15px;
+}
+
+.brand {
+    background-color: skyblue;
+    border-radius: 0 10px;
+    padding-left: 5px;
+    border: 1px solid greenyellow ;
+    font-family: Berlin Sans FB;
+}
+
+.diskon {
+    width: 41px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: pink;
+    color: red;
+    border-radius: 10px;
+}
+
+.cashback {
+    width: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(149, 255, 220);
+    color: green;
+    border-radius: 10px;
+}
+
+.hargadiskon {
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 50px;
+    color: #808080;
+}
+
+.fa-star {
+    color: rgb(237, 237, 0);
+}
+
+button {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.icondiskon {
+    position: absolute;
+    left: 100px;
+    margin-top: -60px;
+}
+
+.fa-location-dot {
+    color: purple;
+}
+
+/* .bobo {
+    width: 1000px;
+    margin: auto;
+} */
+
+/* @media(min-width: 667px) {
+
+    .kolom1 {
+        min-height: 450px;
+    }
+
+    .navigasi {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navigasi .navigasi1 {
+        max-height: auto;
+    }
+
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* .kotak {
+        margin: auto;
+    } */
+
+    .layanan {
+        width: 30%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .layanan img {
+        box-sizing: border-box;
+        min-width: 100px;
+        display: inline-block;
+    }
+
+/* .menu1 {
+    background-color: aliceblue;
+    height: 20px;
+    margin-top: 0px;
+    margin-left: -8px;
+    margin-right: -8px;
+    border-bottom: 3px solid gray;
+}
+.menu1 > p {
+    text-align: center;
+}
+.menu1 > marquee p {
+    margin-top: 1px;
+} */
