@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bi-house-door-fill {
+    color: palevioletred;
+    /* font-size: 20px; */
+}
+
+.bi-envelope-paper-heart-fill {
+    color: palevioletred;
+}
+
+.bi-shop {
+    color: palevioletred;
+}
+
+.bi-bag-heart {
+    color: palevioletred;
+}
+
+.logo {
+    width: 75px;
+    margin-right: 25px;
+    border-radius: 50%;
+}
+
+.kolom {
+    background-color: #f7f7e7;
+    width: 100%;
+    height: 492px;
+    text-align: center;
+    padding: 10px;
+}
+
+.kolom h2 {
+    color: black;
+}
+
+.kolom img {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    margin-top: 280px;
+}
+
+.kolom .fa-star {
+    color: yellow;
+}
+
+.kolom p {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.kolom .b {
+    font-family: Brush Script MT;
+    font-size: 25px;
+}
