@@ -168,152 +168,160 @@
 
 <!-- <br><br> -->
 <td><button type="button" class="btn btn-sm btn-secondary mb-3">Tambah Data</button></td>
-<td><button type="button" class="btn btn-sm btn-secondary mb-3"><i class="bi bi-printer-fill"></i></button></td>
-
-      <!-- <h2>Tentang Produk</h2> -->
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
+<td><button type="button" class="btn btn-sm btn-secondary mb-3" onClick="window.print ();"><i class="bi bi-printer-fill"></i></button></td>
+        
+<script>
+  let id = null
+const makeVariabel = (id)=> {
+    eval(`const ${id} = document.querySelector("#${id}")`)
+}
+const input = (id, type="text",label='',placeholder='')=>{
+    return `
+    <div style="background-color: none; margin: auto; width: 312px;">
+     <b><u><label style="font-size: 19px; margin: 2px; margin-top: 5px; font-family: Brush Script MT;">${label}</label></u></b><br>
+     <input type="${type}" id="${id}" placeholder="${placeholder}"  style="width: 300px; height: 30px; border-radius: 12px; padding-left: 6px; margin: auto; font-size: 13px;"><br>
+     </div>
+     `
+     makeVariabel(id)
+}
+const buttom = (id,label)=>{
+    return `<div class="bab">
+    <button id="${id}" style="margin-bottom: 0px; margin-left: 100px; padding: 8px; border-radius: 10px; background-color: indigo; font-weight: bold; color: white; position: relative; top: -61px;">${label}</button></div>`
+    makeVariabel(id)
+}
+const buttom1 = (id,label)=>{
+    return `<div class="bab">
+    <button id="${id}" style="margin-bottom: 0px; margin-left: 10px; padding: 8px; border-radius: 10px; background-color: indigo; font-weight: bold; color: white; margin-top: -40px;">${label}</button></div>`
+    makeVariabel(id)
+}
+const div = (id)=>{
+    return `<div id="${id}"></div>`
+    makeVariabel(id)
+}
+const editData = (index)=>{
+    namamu.value = data[index].nama
+    nismu.value = data[index].nis
+    kelasmu.value = data[index].kelas
+    jurusanmu.value = data[index].jurusan
+    alamatmu.value = data[index].alamat
+    id = index
+}
+const deleteData = (index)=>{
+    data.splice(index, 1)
+    loadData(data,dataList)
+}
+const loadData1 = (data, element)=>{
+    element.innerHTML =''
+    let i = 0
+    data.forEach(item => {
+        element.innerHTML = `
+        <div class="table-responsive">
+          <div class="ak">
+        <table class="table table-striped table-sm" style="width: 1120px; float: right; margin-bottom: 0px; margin-top: 40px;">
           <thead>
             <tr style="background-color: gray; color:black">
-              <th scope="col">Nomor</th>
-              <th scope="col">ID Pelanggan</th>
-              <th scope="col">Nama Pelanggan</th>
-              <th scope="col">Nama Produk</th>
-              <th scope="col">Kode Produk</th>
-              <!-- <center> -->
-              <th scope="col" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;Keterangan</th>
-              <!-- </center> -->
-              <!-- <th scope="col"></th> -->
-              <!-- <th scope="col">Total Pelanggan</th> -->
+              <th scope="col" style="width: 60px;">Nomor</th>
+              <th scope="col" style="width: 100px;">ID Pelanggan</th>
+              <th scope="col" style="width: 200px;">Nama Pelanggan</th>
+              <th scope="col" style="width: 400px;">Nama Produk</th>
+              <th scope="col" style="width: 110px;">Kode Produk</th>
+              <th scope="col" colspan=""  style="width: 150px;">Keterangan</th>
             </tr>
           </thead>
-          <tbody>
+        </table>
+      </div>
+      </div>
+        `
+    });
+}
+const loadData = (data, element)=>{
+    element.innerHTML =''
+    let i = 0
+    data.forEach(item => {
+        element.innerHTML += `
+        <div class="table-responsive">
+          <div class="ak">
+        <table class="table table-striped table-sm" style="width: 1120px; float: right; margin-bottom: 0px;">
+        <tbody>
             <tr>
-              <td>1</td>
-              <td>11145</td>
-              <td>Adinda</td>
-              <td>Elzatta Obelia Samida</td>
-              <td>2826.001</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>2000</td>
-              <td>Dita</td>
-              <td>Hijabwanitacantik - Hijab Segi Empat Hana - Navy</td>
-              <td>2826.002</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>1118</td>
-              <td>Xaviera</td>
-              <td>ZM Zaskia Mecca - Yogya Charcoal Scarf Kerudung Segi Empat</td>
-              <td>2826.003</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>1115</td>
-              <td>Yumnah Aisyah</td>
-              <td>Gwen Dress Jilbrave Warna Deep Mulberry - S</td>
-              <td>2826.004</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>1112</td>
-              <td>Widya</td>
-              <td>Baju Gamis Syari Haniza set Hijab Gamis set kerudung Bahan manggo crep - Hitam, S</td>
-              <td>2826.005</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>1106</td>
-              <td>Ghania</td>
-              <td>Long Dress Gamis Maxi Hijab Polos elegan - Jfashion Gamis Aninda - Biru</td>
-              <td>2826.006</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>1098</td>
-              <td>Shanika</td>
-              <td>Ulikids Gamis Anak dan Hijab Kombinasi Satin Velvet dan Katun - Merah Muda, XS</td>
-              <td>2826.007</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>1267</td>
-              <td>Jesica</td>
-              <td>Ulikids Gamis Anak dan Hijab Bahan Katun Jepang Motif Bunga - Biru, XS</td>
-              <td>2826.008</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>1018</td>
-              <td>Azalea</td>
-              <td>Dress Putih Set Hijab Anak + Thaluna Kids Dress Kanaya 10_12 + Ori</td>
-              <td>2826.009</td>
-              <td><button type="submit" class="btn btn-sm btn-success">Edit</button></td>
-              <td><button type="submit" class="btn btn-sm btn-danger">Hapus</button></td>
-            </tr>
-            <!-- <tr>
-              <td>1,010</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,011</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,012</td>
-              <td>text</td>
-              <td>placeholder</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,013</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>visual</td>
-            </tr>
-            <tr>
-              <td>1,014</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,015</td>
-              <td>random</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>text</td> -->
+              <td style="width: 60px;">${item.nama}</td>
+              <td style="width: 100px;">${item.nis}</td>
+              <td style="width: 200px;">${item.kelas}</td>
+              <td style="width: 400px;">${item.jurusan}</td>
+              <td style="width: 110px;">${item.alamat}</td>
+              <td style="width: 70px;"><button onclick="editData(${i})" style="background-color: #00de00; padding: 12px; border-radius: 10px; color: white; font-weight: bold;">Edit</button></td>
+              <td style="width: 70px;"><button onclick="deleteData(${i})" style="background-color: red; padding: 12px; border-radius: 10px; color: white; font-weight: bold;">Hapus</button></td>
             </tr>
           </tbody>
         </table>
       </div>
+      </div>
+        `
+        i++
+    });
+}
+const clear = ()=>{
+    namamu.value = null
+    nismu.value = null
+    kelasmu.value = null
+    jurusanmu.value = null
+    alamatmu.value = null
+    id = null
+}
+let data = [
+    {
+        'nama':1,
+        'nis':11145,
+        'kelas':'Adinda',
+        'jurusan':'Elzatta Obelia Samida',
+        'alamat':2826.001
+    },
+    {
+        'nama':2,
+        'nis':2000,
+        'kelas':'Dita',
+        'jurusan':'Hijabwanitacantik - Hijab Segi Empat Hana - Navy',
+        'alamat':2826.002
+    }
+]
+
+document.body.innerHTML += input('namamu','number','Nomor','Silahkan diisi')
+document.body.innerHTML += input('nismu','number','ID Pelanggan','Silahkan diisi')
+document.body.innerHTML += input('kelasmu','text','Nama Pelanggan','Silahkan diisi')
+document.body.innerHTML += input('jurusanmu','text','Nama Produk','Silahkan diisi')
+document.body.innerHTML += input('alamatmu','number','Kode Produk','Silahkan diisi')
+document.body.innerHTML += buttom1('btnSimpan','Simpan')
+document.body.innerHTML += buttom('btnClear','Clear')
+document.body.innerHTML += div('judul')
+document.body.innerHTML += div('dataList')
+loadData1(data, judul)
+loadData(data, dataList)
+btnClear.addEventListener('click', ()=>{
+    clear()
+})
+btnSimpan.addEventListener('click', ()=>{
+    if(id == null){
+        data.push({
+            'nama': namamu.value,
+            'nis': nismu.value,
+            'kelas': kelasmu.value,
+            'jurusan': jurusanmu.value,
+            'alamat': alamatmu.value
+        })
+        clear()
+    }else{
+        data[id].nama = namamu.value
+        data[id].nis = nismu.value
+        data[id].kelas = kelasmu.value
+        data[id].jurusan = jurusanmu.value
+        data[id].alamat = alamatmu.value
+    }
+    loadData(data,dataList)
+})
+</script>
+
+      <!-- <h2>Tentang Produk</h2> -->
+      
     </main>
   </div>
 </div>
