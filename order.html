@@ -215,20 +215,22 @@ const loadData1 = (data, element)=>{
     let i = 0
     data.forEach(item => {
         element.innerHTML = `
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
         <div class="table-responsive">
-        <table class="table table-striped table-sm" style="width: 1120px; float: right; margin-bottom: 0px;">
+        <table class="table table-striped table-sm" style="margin-bottom: 0px;">
           <thead>
             <tr style="background-color: gray; color:black">
-              <th scope="col" style="width: 60px;">Nomor</th>
-              <th scope="col" style="width: 100px;">ID Pelanggan</th>
-              <th scope="col" style="width: 200px;">Nama Pelanggan</th>
-              <th scope="col" style="width: 400px;">Nama Produk</th>
-              <th scope="col" style="width: 110px;">Kode Produk</th>
-              <th scope="col" colspan=""  style="width: 150px;">Keterangan</th>
+              <th scope="col" style="width: 30px;">No</th>
+              <th scope="col" style="width: 120px;">ID Pelanggan</th>
+              <th scope="col" style="width: 150px;">Nama Pelanggan</th>
+              <th scope="col" style="width: 330px;">Nama Produk</th>
+              <th scope="col" style="width: 120px;">Kode Produk</th>
+              <th scope="col" style="width: 150px;"><center>Keterangan</center></th>
             </tr>
           </thead>
         </table>
       </div>
+      </main>
         `
     });
 }
@@ -237,21 +239,22 @@ const loadData = (data, element)=>{
     let i = 0
     data.forEach(item => {
         element.innerHTML += `
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
         <div class="table-responsive">
-        <table class="table table-striped table-sm" style="width: 1120px; float: right; margin-bottom: 0px;">
+        <table class="table table-striped table-sm" style="margin-bottom: 0px; margin-top: 0px;">
         <tbody>
             <tr>
-              <td style="width: 60px;">${item.k1}</td>
-              <td style="width: 100px;">${item.k2}</td>
-              <td style="width: 200px;">${item.k3}</td>
-              <td style="width: 400px;">${item.k4}</td>
-              <td style="width: 110px;">${item.k5}</td>
-              <td style="width: 70px;"><button onclick="editData(${i})" style="background-color: #00de00; padding: 12px; border-radius: 10px; color: white; font-weight: bold;">Edit</button></td>
-              <td style="width: 70px;"><button onclick="deleteData(${i})" style="background-color: red; padding: 12px; border-radius: 10px; color: white; font-weight: bold;">Hapus</button></td>
+              <td style="width: 30px;">${item.k1}</td>
+              <td style="width: 120px;">${item.k2}</td>
+              <td style="width: 150px;">${item.k3}</td>
+              <td style="width: 330px;">${item.k4}</td>
+              <td style="width: 120px;">${item.k5}</td>
+              <td style="width: 150px;"><center><button onclick="editData(${i})" style="background-color: #00de00; padding: 4px; border-radius: 10px; color: white; font-weight: bold; margin-bottom: 3px;">Edit</button> <button onclick="deleteData(${i})" style="background-color: red; padding: 4px; border-radius: 10px; color: white; font-weight: bold;">Hapus</button></center></td>
             </tr>
           </tbody>
         </table>
       </div>
+      </main>
         `
         i++
     });
@@ -267,7 +270,7 @@ const clear = ()=>{
 let data = [
     {
         'k1':1,
-        'k2':11145,
+        'k2':1145,
         'k3':'Adinda',
         'k4':'Elzatta Obelia Samida',
         'k5':2826.001
@@ -276,7 +279,7 @@ let data = [
         'k1':2,
         'k2':2000,
         'k3':'Dita',
-        'k4':'Hijabwanitacantik - Hijab Segi Empat Hana - Navy',
+        'k4':'Hijab wanita cantik - Hijab Segi Empat Hana - Navy',
         'k5':2826.002
     },
     {
