@@ -347,19 +347,19 @@ btnClear.addEventListener('click', ()=>{
 btnSimpan.addEventListener('click', ()=>{
     if(id == null){
         data.push({
-            'nama': nomor.value,
-            'nis': idp.value,
-            'kelas': pelanggan.value,
-            'jurusan': produk.value,
-            'alamat': kode.value
+            'k1': nomor.value,
+            'k2': idp.value,
+            'k3': pelanggan.value,
+            'k4': produk.value,
+            'k5': kode.value
         })
         clear()
     }else{
-        data[id].nama = nomor.value
-        data[id].nis = idp.value
-        data[id].kelas = pelanggan.value
-        data[id].jurusan = produk.value
-        data[id].alamat = kode.value
+        data[id].k1 = nomor.value
+        data[id].k2 = idp.value
+        data[id].k3 = pelanggan.value
+        data[id].k4 = produk.value
+        data[id].k5 = kode.value
     }
     loadData(data,dataList)
 })
