@@ -199,11 +199,11 @@ const div = (id)=>{
     makeVariabel(id)
 }
 const editData = (index)=>{
-    namamu.value = data[index].nama
-    nismu.value = data[index].nis
-    kelasmu.value = data[index].kelas
-    jurusanmu.value = data[index].jurusan
-    alamatmu.value = data[index].alamat
+    nomor.value = data[index].k1
+    idp.value = data[index].k2
+    pelanggan.value = data[index].k3
+    produk.value = data[index].k4
+    kode.value = data[index].k5
     id = index
 }
 const deleteData = (index)=>{
@@ -216,8 +216,7 @@ const loadData1 = (data, element)=>{
     data.forEach(item => {
         element.innerHTML = `
         <div class="table-responsive">
-          <div class="ak">
-        <table class="table table-striped table-sm" style="width: 1120px; float: right; margin-bottom: 0px; margin-top: 40px;">
+        <table class="table table-striped table-sm" style="width: 1120px; float: right; margin-bottom: 0px;">
           <thead>
             <tr style="background-color: gray; color:black">
               <th scope="col" style="width: 60px;">Nomor</th>
@@ -230,7 +229,6 @@ const loadData1 = (data, element)=>{
           </thead>
         </table>
       </div>
-      </div>
         `
     });
 }
@@ -240,56 +238,103 @@ const loadData = (data, element)=>{
     data.forEach(item => {
         element.innerHTML += `
         <div class="table-responsive">
-          <div class="ak">
         <table class="table table-striped table-sm" style="width: 1120px; float: right; margin-bottom: 0px;">
         <tbody>
             <tr>
-              <td style="width: 60px;">${item.nama}</td>
-              <td style="width: 100px;">${item.nis}</td>
-              <td style="width: 200px;">${item.kelas}</td>
-              <td style="width: 400px;">${item.jurusan}</td>
-              <td style="width: 110px;">${item.alamat}</td>
+              <td style="width: 60px;">${item.k1}</td>
+              <td style="width: 100px;">${item.k2}</td>
+              <td style="width: 200px;">${item.k3}</td>
+              <td style="width: 400px;">${item.k4}</td>
+              <td style="width: 110px;">${item.k5}</td>
               <td style="width: 70px;"><button onclick="editData(${i})" style="background-color: #00de00; padding: 12px; border-radius: 10px; color: white; font-weight: bold;">Edit</button></td>
               <td style="width: 70px;"><button onclick="deleteData(${i})" style="background-color: red; padding: 12px; border-radius: 10px; color: white; font-weight: bold;">Hapus</button></td>
             </tr>
           </tbody>
         </table>
       </div>
-      </div>
         `
         i++
     });
 }
 const clear = ()=>{
-    namamu.value = null
-    nismu.value = null
-    kelasmu.value = null
-    jurusanmu.value = null
-    alamatmu.value = null
+    nomor.value = null
+    idp.value = null
+    pelanggan.value = null
+    produk.value = null
+    kode.value = null
     id = null
 }
 let data = [
     {
-        'nama':1,
-        'nis':11145,
-        'kelas':'Adinda',
-        'jurusan':'Elzatta Obelia Samida',
-        'alamat':2826.001
+        'k1':1,
+        'k2':11145,
+        'k3':'Adinda',
+        'k4':'Elzatta Obelia Samida',
+        'k5':2826.001
     },
     {
-        'nama':2,
-        'nis':2000,
-        'kelas':'Dita',
-        'jurusan':'Hijabwanitacantik - Hijab Segi Empat Hana - Navy',
-        'alamat':2826.002
-    }
+        'k1':2,
+        'k2':2000,
+        'k3':'Dita',
+        'k4':'Hijabwanitacantik - Hijab Segi Empat Hana - Navy',
+        'k5':2826.002
+    },
+    {
+        'k1':3,
+        'k2':1118,
+        'k3':'Xaviera',
+        'k4':'ZM Zaskia Mecca - Yogya Charcoal Scarf Kerudung Segi Empat',
+        'k5':2826.003
+    },
+    {
+        'k1':4,
+        'k2':1115,
+        'k3':'Yumnah Aisyah',
+        'k4':'Gwen Dress Jilbrave Warna Deep Mulberry - S',
+        'k5':2826.004
+    },
+    {
+        'k1':5,
+        'k2':1112,
+        'k3':'Widya',
+        'k4':'Baju Gamis Syari Haniza set Hijab Gamis set kerudung Bahan manggo crep - Hitam',
+        'k5':2826.005
+    },
+    {
+        'k1':6,
+        'k2':1106,
+        'k3':'Ghania',
+        'k4':'Long Dress Gamis Maxi Hijab Polos elegan - Jfashion Gamis Aninda - Biru',
+        'k5':2826.006
+    },
+    {
+        'k1':7,
+        'k2':1098,
+        'k3':'Shanika',
+        'k4':'Ulikids Gamis Anak dan Hijab Kombinasi Satin Velvet dan Katun - Merah Muda',
+        'k5':2826.007
+    },
+    {
+        'k1':8,
+        'k2':1267,
+        'k3':'Jesica',
+        'k4':'Ulikids Gamis Anak dan Hijab Bahan Katun Jepang Motif Bunga - Biru, XS',
+        'k5':2826.008
+    },
+    {
+        'k1':9,
+        'k2':1018,
+        'k3':'Azalea',
+        'k4':'Dress Putih Set Hijab Anak + Thaluna Kids Dress Kanaya 10_12 + Ori',
+        'k5':2826.009
+    },
 ]
 
-document.body.innerHTML += input('namamu','number','Nomor','Silahkan diisi')
-document.body.innerHTML += input('nismu','number','ID Pelanggan','Silahkan diisi')
-document.body.innerHTML += input('kelasmu','text','Nama Pelanggan','Silahkan diisi')
-document.body.innerHTML += input('jurusanmu','text','Nama Produk','Silahkan diisi')
-document.body.innerHTML += input('alamatmu','number','Kode Produk','Silahkan diisi')
+document.body.innerHTML += input('nomor','number','Nomor','Silahkan diisi')
+document.body.innerHTML += input('idp','number','ID Pelanggan','Silahkan diisi')
+document.body.innerHTML += input('pelanggan','text','Nama Pelanggan','Silahkan diisi')
+document.body.innerHTML += input('produk','text','Nama Produk','Silahkan diisi')
+document.body.innerHTML += input('kode','number','Kode Produk','Silahkan diisi')
 document.body.innerHTML += buttom1('btnSimpan','Simpan')
 document.body.innerHTML += buttom('btnClear','Clear')
 document.body.innerHTML += div('judul')
@@ -302,19 +347,19 @@ btnClear.addEventListener('click', ()=>{
 btnSimpan.addEventListener('click', ()=>{
     if(id == null){
         data.push({
-            'nama': namamu.value,
-            'nis': nismu.value,
-            'kelas': kelasmu.value,
-            'jurusan': jurusanmu.value,
-            'alamat': alamatmu.value
+            'nama': nomor.value,
+            'nis': idp.value,
+            'kelas': pelanggan.value,
+            'jurusan': produk.value,
+            'alamat': kode.value
         })
         clear()
     }else{
-        data[id].nama = namamu.value
-        data[id].nis = nismu.value
-        data[id].kelas = kelasmu.value
-        data[id].jurusan = jurusanmu.value
-        data[id].alamat = alamatmu.value
+        data[id].nama = nomor.value
+        data[id].nis = idp.value
+        data[id].kelas = pelanggan.value
+        data[id].jurusan = produk.value
+        data[id].alamat = kode.value
     }
     loadData(data,dataList)
 })
